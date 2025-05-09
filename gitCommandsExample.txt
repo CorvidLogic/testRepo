@@ -9,14 +9,6 @@ git push // pushes committed changes with comments to remote repo
 git init // initializes a local file into a local git repo
 git remote add origin <RepositoryURL.com>
 git diff // Shows changes between commits staged
-git log // Grabs the history of the git repository
-    git log -p // shows every specific for git commits
-    git log --graph //visualization added to show how branches are moving around
-    git long --grep='REGULAREXPRESSION' // searches git history for the regular expression
-git show <commit ID> // shows specifics for a git commit
-
-RENAME A FileName
-git mv <Filepath\filename.Extension> <NewFileName.Extension>
 
 POWERSHELL COMMAND
 new-item -name "ItemName.Extension"
