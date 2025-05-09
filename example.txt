@@ -1,1 +1,7 @@
 This is an example
+git --version // reports back the version of git
+git clone <RepositoryURL.com> // clones the repository from cloud to local
+code ./<FileName.Extension> // opens the file in VS CODE
+git add <FileName.Extension>
+git status // Reports the status of changes staged
+git commit -m <Enter Commit message of changes made> // Commits staged changes with a commit comment 
