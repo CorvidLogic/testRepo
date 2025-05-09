@@ -5,3 +5,5 @@ code ./<FileName.Extension> // opens the file in VS CODE
 git add <FileName.Extension>
 git status // Reports the status of changes staged
 git commit -m <Enter Commit message of changes made> // Commits staged changes with a commit comment 
+git push // pushes committed changes with comments to remote repo
+git init // initializes a local file into a git repo
