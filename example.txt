@@ -9,3 +9,6 @@ git push // pushes committed changes with comments to remote repo
 git init // initializes a local file into a local git repo
 git remote add origin <RepositoryURL.com>
 git diff // Shows changes between commits staged
+
+POWERSHELL COMMAND
+new-item -name "ItemName.Extension"
