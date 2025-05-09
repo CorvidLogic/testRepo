@@ -1,7 +1,6 @@
-This is an example
+------------------ ESSENTIAL COMMANDS ------------------
 git --version // reports back the version of git
 git clone <RepositoryURL.com> // clones the repository from cloud to local
-code ./<FileName.Extension> // opens the file in VS CODE
 git add <FileName.Extension>
 git status // Reports the status of changes staged
 git commit -m <Enter Commit message of changes made> // Commits staged changes with a commit comment 
@@ -9,14 +8,53 @@ git push // pushes committed changes with comments to remote repo
 git init // initializes a local file into a local git repo
 git remote add origin <RepositoryURL.com>
 git diff // Shows changes between commits staged
+
+code ./<FileName.Extension> // opens the file in VS CODE
+
+------------------ GIT LOGGING ------------------
+
 git log // Grabs the history of the git repository
     git log -p // shows every specific for git commits
     git log --graph //visualization added to show how branches are moving around
     git long --grep='REGULAREXPRESSION' // searches git history for the regular expression
 git show <commit ID> // shows specifics for a git commit
 
+git log --oneline // only shows commit messages and shortened COMMIT ID
+
+------------------ GIT RESTORE ------------------
+
+git restore --staged <FileName.Extension> // Deleted files staged for commit
+git restore <FileName.Extension> // Deletes all changes since last push
 RENAME A FileName
 git mv <Filepath\filename.Extension> <NewFileName.Extension>
 
-POWERSHELL COMMAND
+------------------ GIT REVERT ------------------
+git revert <COMMIT ID> // reverts the branch back to the commit chosen, as a new commit
+
+------------------ GIT LOOK AT OLD COMMITS ------------------
+git checkout <COMMIT ID>  //go back and look at an old commit
+    git checkout main // returns you back to current main branch
+
+------------------ GIT IGNORE ------------------
+
+CREATE NEW FILE IN MAIN BRANCH
+.gitignore
+
+INSIDE .gitignore
+Specify files to ignore
+do so as <FileName.Extension>
+<FolderDirName/>
+<FolderDirName/*.fileTypeToIgnore>
+
+EXAMPLE
+filelog1.txt AS <FileName.Extension>
+logs/ AS <FolderDirName/>
+logs/*.txt AS <FolderDirName/*.fileTypeToIgnore>
+
+------------------ GIT MESSAGE SYNTAX ------------------
+present tense
+describe exactly what changes were applied
+less than 50 chars
+
+------------------ POWERSHELL COMMANDS ------------------
 new-item -name "ItemName.Extension"
