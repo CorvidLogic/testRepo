@@ -8,6 +8,11 @@ git push // pushes committed changes with comments to remote repo
 git init // initializes a local file into a local git repo
 git remote add origin <RepositoryURL.com>
 git diff // Shows changes between commits staged
+git pull // pulls changes from remotre repository to local repository
+
+_Fetching tags and commits from remote__
+git fetch // pulls commits and tags
+git fetch --tags //pulls only tags with necessary commits
 
 code ./<FileName.Extension> // opens the file in VS CODE
 
@@ -17,7 +22,10 @@ git log // Grabs the history of the git repository
     git log -p // shows every specific for git commits
     git log --graph //visualization added to show how branches are moving around
     git long --grep='REGULAREXPRESSION' // searches git history for the regular expression
+
+
 git show <commit ID> // shows specifics for a git commit
+git show <List ID> // shows specifics for git commit using list id created using git tag
 
 git log --oneline // only shows commit messages and shortened COMMIT ID
 
@@ -34,6 +42,10 @@ git revert <COMMIT ID> // reverts the branch back to the commit chosen, as a new
 ------------------ GIT LOOK AT OLD COMMITS ------------------
 git checkout <COMMIT ID>  //go back and look at an old commit
     git checkout main // returns you back to current main branch
+
+------------------ GIT LOOK AT OLD COMMITS USING TAGS ------------------
+git checkout -b new_branch <tagName> // checks out commit associated with tag name
+git checkout <tagName> // checks out commit associated with tag name
 
 ------------------ GIT IGNORE ------------------
 
@@ -56,5 +68,34 @@ present tense
 describe exactly what changes were applied
 less than 50 chars
 
+------------------ GIT TAGS ------------------
+__Creating Tags_
+git tag <TAG NAME> <COMMITID> // creates a lightweight tag
+git tag -a <TAG NAME> -m <TAG MESSAGE> <COMMITID AKA SHA> // creates an annotated tag
+git tag --list // Retrieve list of tags
+git tag -l // Retrieves list of tags
+git tag -l "SEARCH STRING" // retreives list of tags that match search STRING
+git tag -l -n // List tags with annotations
+
+git show <tagName> // shows commit details using git tag name
+git diff <tagName1>..<tagName2> // shows the difference between two tagged commits
+
+__deleting tags__
+git tag --Delete <tagName> // Deletes Tag
+git tag -d <tagName> // Deletes tag
+
+__Push Tags to Remote Server__
+git push origin <tagName> // Push single tag to remote server
+git push --tags //Push all tags to remote server
+
+__Delete Tags from remote__
+git push origin :<tagName>
+git push --delete origin <tagName>
+git push -d origin <tagName> 
+
+------------------ GIT BRANCH ------------------
+git branch <newBranchName> //creates new branch
+
+git checkout -b <branchName> // creates branch and reattaches head
 ------------------ POWERSHELL COMMANDS ------------------
 new-item -name "ItemName.Extension"
